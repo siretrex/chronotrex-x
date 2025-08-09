@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+
+
+
+.landing{
+  background-image: url("./assets/pexels-audrius-vizbaras-584203-16052072.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
