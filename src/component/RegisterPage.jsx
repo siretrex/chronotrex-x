@@ -70,7 +70,7 @@ const RegisterPage = () => {
     setLoading(true);
     try {
       const { confirmPassword, ...payload } = userData; // exclude confirmPassword
-      await axios.post(`${BASE_URL}/register`, payload);
+      await axios.post(`${BASE_URL}register`, payload);
       alert("Registration successful!");
       navigate("/login");
     } catch (err) {
