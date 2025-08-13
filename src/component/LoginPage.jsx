@@ -20,7 +20,8 @@ const LoginPage = () => {
     e.preventDefault();
     setLoading(true);
     setError("");
-
+    console.log(email, password)
+    console.log("4777777777777777777777777777777777777777777777")
     try {
       const response = await axios.get(`${BASE_URL}login`, {
         email,
