@@ -26,7 +26,6 @@ const LoginPage = () => {
         email,
         password,
       });
-
       const user = { user: response.data.user, token: response.data.token };
       dispatch(login(user));
       navigator('/home')
