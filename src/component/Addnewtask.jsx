@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { updateTask } from "../features/user/userSlice";
+import { BASE_URL } from "../Baseurl";
 
 const Addnewtask = () => {
   const [taskName, setTaskName] = useState("");
@@ -25,7 +26,7 @@ const Addnewtask = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:4000/addtask", {
+      const res = await axios.post(`${BASE_URL}addtask`, {
         task_name: taskName,
         userId: userID,
       });

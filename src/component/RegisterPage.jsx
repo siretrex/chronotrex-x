@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { BASE_URL } from "../Baseurl";
 
 const RegisterPage = () => {
   const [userData, setUserData] = useState({
@@ -14,6 +15,7 @@ const RegisterPage = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
 
   const changeHandler = (e) => {
     setUserData((prev) => ({
@@ -63,16 +65,18 @@ const RegisterPage = () => {
 
   const apiHandler = async (e) => {
     e.preventDefault();
-
     if (!validate()) return;
 
     setLoading(true);
     try {
-      await axios.post("http://localhost:4000/register", userData);
+      const { confirmPassword, ...payload } = userData; // exclude confirmPassword
+      await axios.post(`${BASE_URL}/register`, payload);
       alert("Registration successful!");
       navigate("/login");
     } catch (err) {
-      setError("Registration failed. Please try again.");
+      setError(
+        err.response?.data?.message || "Registration failed. Please try again."
+      );
     } finally {
       setLoading(false);
     }

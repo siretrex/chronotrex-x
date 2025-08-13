@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Detailedtask from "../cards/Detailedtask";
+import { BASE_URL } from "../Baseurl";
 
 const Showtasks = () => {
   const userTasks = useSelector((state) => state.user.user.tasks);
@@ -9,9 +10,8 @@ const Showtasks = () => {
 
   useEffect(() => {
     if (!userTasks || userTasks.length === 0) return;
-
     axios
-      .post("http://localhost:4000/task/details", { tasks: userTasks })
+      .post(`${BASE_URL}task/details`, { tasks: userTasks })
       .then((res) => {
         console.log("Task details response:", res);
         setTaskDetails(res.data.detailedTaskList || []);

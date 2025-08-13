@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import axios from "axios";
 import { Link } from "react-router-dom";  
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "../Baseurl";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -21,7 +22,7 @@ const LoginPage = () => {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:4000/login", {
+      const response = await axios.post(`${BASE_URL}login`, {
         email,
         password,
       });

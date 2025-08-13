@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
+import { BASE_URL } from "../Baseurl";
 
 const Detailedtask = ({ taskData }) => {
   const [actions, setActions] = useState(taskData?.actions || []);
@@ -33,9 +34,8 @@ const Detailedtask = ({ taskData }) => {
       console.warn("No task ID available. Cannot update task on server.");
       return; // Skip sending update if no taskId
     }
-
     axios
-      .post("http://localhost:4000/task/update", {
+      .post(`${BASE_URL}task/update`, {
         userId,
         taskId: taskData._id,
         taskContent: newActionContent,
