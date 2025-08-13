@@ -23,7 +23,7 @@ const LoginPage = () => {
     console.log(email, password)
     console.log("4777777777777777777777777777777777777777777777")
     try {
-      const response = await axios.get(`${BASE_URL}login`, {
+      const response = await axios.post(`${BASE_URL}login`, {
         email,
         password,
       });
