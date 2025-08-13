@@ -25,7 +25,7 @@ const LandingPage = () => {
             </Link>
             <Link
               to="/about"
-              className="px-6 py-3 border border-violet-500 hover:bg-violet-500/20 rounded-lg transition duration-200 text-lg"
+              className="px-6 py-3 border border-violet-500 hover:bg-violet-500/20 rounded-lg transition duration-200 text-lg disabled:"
             >
               Learn More
             </Link>
