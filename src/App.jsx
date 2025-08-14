@@ -23,19 +23,7 @@ function App() {
           {userId ? (
             <Navbar />
           ) : (
-            <div className="flex justify-between items-center w-full">
-              <Link to="/">
-                <h1 className="text-white text-2xl font-bold">Chronotrox</h1>
-              </Link>
-              <Link
-                to="/login"
-                className="text-white text-lg font-semibold hover:underline"
-              >
-                Login
-              </Link>
-            </div>
-
-
+               <h1 className='text-3xl pl-3 text-violet-600 font-bold'>Chronotrex</h1>
           )}
         </div>
 
@@ -43,12 +31,12 @@ function App() {
         <div className="w-full min-h-screen pt-[60px] text-white flex flex-col">
           <div className="flex-1">
             <Routes>
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/login" element={<LoginPage />} />
-              <Route path="/register" element={<RegisterPage />} />
-              <Route path="/addtask" element={<Protected Element={Addnewtask} />} />
-              <Route path="/home" element={<Protected Element={HeroPage} />} />
-              <Route path="/showtasks" element={<Protected Element={Showtasks} />} />
+              <Route path="/chronotrex-x" element={<LandingPage />} />
+              <Route path="/chronotrex-x/login" element={<LoginPage />} />
+              <Route path="/chronotrex-x/register" element={<RegisterPage />} />
+              <Route path="/chronotrex-x/addtask" element={<Protected Element={Addnewtask} />} />
+              <Route path="/chronotrex-x/home" element={<Protected Element={HeroPage} />} />
+              <Route path="/chronotrex-x/showtasks" element={<Protected Element={Showtasks} />} />
             </Routes>
           </div>
 

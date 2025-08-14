@@ -7,8 +7,8 @@ const Navbar = () => {
   const dispatch = useDispatch();
 
   const menuItems = [
-    { label: "Add Task", to: "/addtask", type: "link" },
-    { label: "Show", to: "/showtasks", type: "link" },
+    { label: "Add Task", to: "/chronotrex-x/addtask", type: "link" },
+    { label: "Show", to: "/chronotrex-x/showtasks", type: "link" },
     { label: "Logout", action: () => dispatch(logout()), type: "button" },
   ];
 
@@ -16,8 +16,8 @@ const Navbar = () => {
     <nav className="w-full bg-gray-900 shadow-md">
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center h-[55px] md:h-auto py-2">
         {/* Logo */}
-        <div className="text-2xl font-bold text-violet-400 mb-2 md:mb-0">
-          <Link to="/home">Chronotrex</Link>
+        <div className="text-2xl font-bold text-violet-400 mb-2 md:mb-0 pl-2">
+          <Link to="/chronotrex-x/home">Chronotrex</Link>
         </div>
 
         {/* Menu Items */}
@@ -35,7 +35,7 @@ const Navbar = () => {
               <button
                 key={index}
                 onClick={item.action}
-                className="hover:text-violet-400 text-white font-medium"
+                className="hover:text-violet-400 text-white font-medium pr-2"
               >
                 {item.label}
               </button>

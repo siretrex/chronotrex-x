@@ -72,7 +72,7 @@ const RegisterPage = () => {
       const { confirmPassword, ...payload } = userData; // exclude confirmPassword
       await axios.post(`${BASE_URL}register`, payload);
       alert("Registration successful!");
-      navigate("/login");
+      navigate("/chronotrex-x/login");
     } catch (err) {
       setError(
         err.response?.data?.message || "Registration failed. Please try again."
@@ -198,7 +198,7 @@ const RegisterPage = () => {
 
         <p className="text-center text-sm">
           Already have an account?{" "}
-          <Link to="/login" className="text-violet-400 hover:underline">
+          <Link to="/chronotrex-x/login" className="text-violet-400 hover:underline">
             Login
           </Link>
         </p>

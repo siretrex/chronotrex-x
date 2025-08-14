@@ -24,10 +24,10 @@ const LandingPage = () => {
               Get Started
             </Link>
             <Link
-              to="/about"
+              to="/login"
               className="px-6 py-3 border border-violet-500 hover:bg-violet-500/20 rounded-lg transition duration-200 text-lg disabled:"
             >
-              Learn More
+              Login
             </Link>
           </div>
         </div>
