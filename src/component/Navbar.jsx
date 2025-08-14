@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full bg-gray-900 shadow-md">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center h-[55px] md:h-auto py-2">
+      <div className="max-w-7xl mx-auto px-4 flex  md:flex-row justify-between items-center h-[55px] md:h-auto py-2">
         {/* Logo */}
         <div className="text-2xl font-bold text-violet-400 mb-2 md:mb-0 pl-2">
           <Link to="/chronotrex-x/home">Chronotrex</Link>
