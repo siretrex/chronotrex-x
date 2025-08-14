@@ -21,7 +21,7 @@ const Navbar = () => {
         </div>
 
         {/* Menu Items */}
-        <div className="flex flex-col md:flex-row md:space-x-8 items-center space-y-2 md:space-y-0">
+        <div className="flex gap-1.5 md:flex-row md:space-x-8 items-center space-y-2 md:space-y-0">
           {menuItems.map((item, index) =>
             item.type === "link" ? (
               <Link
